@@ -12,10 +12,6 @@ Sigrid Lundberg
 sigfrid (at) sigfrid-lundberg.se
 .LP
 .\" dropcap F 3
-Fitch is a notation for natural deduction.
-.[
-natural deduction stanford
-.]
 \f(CRtroff\fP is a software system for type-setting using Unix\f(CR\(tm\fP and related operating systems.
 .[
 ossanna kernighan
@@ -46,7 +42,11 @@ There are other competitors, in particular the slightly younger TeX and LaTeX.
 There are also alternative implementations of troff,
 but this is the version I use.
 .PP
-The Fitch notations has got its name after its inventor, Fredric Fitch.
+Fitch is a notation for natural deduction.
+.[
+natural deduction stanford
+.]
+It has got its name after its inventor, Fredric Fitch.
 This notation seems to be a de facto standard:
 It is used in all the text books I have been able to find electronically,
 and seems to be taught at logics courses in mathematics as well as philosophy.
@@ -115,9 +115,9 @@ but takes a long time to type.
 The \f(CReqn\fP macros are for easier typing and I have tried to adjust spacings for a nicer look.
 .TS
 allbox center tab(;);
-lb lb lb lb;
-l l l l.
-Unicode;Character;Groff name;\f(CBeqn\fP macro
+lb lb lb lb lb;
+l l l l l.
+Unicode;Character;Groff name;\f(CBeqn\fP macro;Comment
 U+00AC;¬;\\[no];not	
 U+2227;∧;\\[AN];and
 U+2228;∨;\\[OR];or
@@ -130,8 +130,19 @@ U+2194;↔;\\[<>];iff
 U+2194;↔;\\[<>];equiv
 U+21D4;⇔;\\[hA]   
 U+22A5;⊥;\\[pp];falsum
-U+22A2;⊢;not available
-U+22A8;⊨;not available
+U+22A2;⊢;not available;;T{
+.na
+syntactic consequence
+.br
+turnstile
+.\" tee,yields, proves, satisfies or entails
+T}
+U+22A8;⊨;not available;;T{
+.na
+semantic consequence
+.br
+double turnstile
+T}
 U+2261;≡;\\[==];identicalto
 U+25A1;□;\\[sq];nece
 U+25A1;□;\\[sq];necessarily
@@ -167,42 +178,12 @@ Using logic in graphs
 .vs 12
 .ps 10
 Figure 1. The traditional aristotelian syllogisms.
+
 .KE
 .SH
 Writing Fitch arguments
 .KF
-.sp
-.PS
-.ps 10
-.vs 12
-scale=2.54
-moveht=0.75
-boxht=0.75
-movewid=0.9
-
-set_steps_and_depths(8,3)
-
-start_proof(START);
-add_premis(START,"$A or B$");
-add_premis(START,"$not A$");
-premis_end(START);
-
-start_proof(SUB1);
-add_premis(SUB1,"$A$");
-premis_end(SUB1);
-add_step(SUB1,"$\[pp]$","\[pp] Intro: 3,2");
-add_step(SUB1,"$B$","\[pp] Elim: 4");
-end_proof(SUB1);
-
-start_proof(SUB2);
-add_premis(SUB2,"$B$");
-premis_end(SUB2);
-add_step(SUB2,"$B$","Reit: 6");
-end_proof(SUB2);
-
-add_step(START,"$B$","∨ Elim: 6-7,3-5,1");
-end_proof(START)
-.PE
+.so first-fitch.ms
 .QP
 .vs 12
 .ps 10
@@ -214,10 +195,8 @@ The horisontal line after step 2 is usually referred to as the \fIfitch line.\fP
 The two groups, 3\(en5 and 3\(en6 are sub-proofs,
 with their own premisses,
 vertical lines and fitch lines
-.sp
+
 .KE
-.SH
-How to write Fitch in troff
 .LP
 Any proof is initialized by calling this macro,
 which informs all scripts on the number of steps in the proof and its maxiumum depth,
@@ -285,57 +264,15 @@ Sanity checks and proof reading is your job.
 .KF
 .sp
 .ID
-.PS
-.vs 12
-.ps 10
-scale=2.54
-moveht=0.75
-boxht=0.75
-movewid=1.0
-
-set_steps_and_depths(12,5);
-
-start_proof(START);
-add_premis(START,"$A or B$");
-add_premis(START,"$not B or C$");
-premis_end(START);
-
-start_proof(SUB1);	
-add_premis(SUB1,"$A$");
-premis_end(SUB1);
-add_step(SUB1,"$A or C$","\[OR] Intro:3");
-end_proof(SUB1)
-
-start_proof(SUB2);
-add_premis(SUB2,"$B$");
-premis_end(SUB2);
-
-start_proof(SUB21);
-add_premis(SUB21,"$not B$");
-premis_end(SUB21);
-add_step(SUB21,"$falsum$","\[pp] Intro:6,5");
-add_step(SUB21,"$A or  C$","\[pp] Elim:7");
-end_proof(SUB21);
-
-start_proof(SUB22);
-add_premis(SUB22,"$C$");
-premis_end(SUB22);
-add_step(SUB22,"$A or C$","\[OR] Intro:9");
-end_proof(SUB22);
-
-add_step(SUB2,"$A or C$","\[OR] Elim:6-8,9-10,2");
-end_proof(SUB2);
-
-add_step(START,"$A or C$","\[OR] Elim:1,3-4,5-11");
-
-end_proof(START);
-.PE
+.so PL-proof.ms
 .DE
 .QP
 .vs 12
 .ps 10
-Figure 2. A slightly longer example: Prove that $A or B, not B or C therefore A or C$.
-.sp
+Figure 2.
+A slightly longer example:
+Prove that $A or B, not B or C therefore A or C$.
+
 .KE
 .LP
 .KF
@@ -345,6 +282,11 @@ Figure 2. A slightly longer example: Prove that $A or B, not B or C therefore A 
 .vs 12
 .ps 10
 Figure 3. A proof using predicate logic.
+It proves without premisses one of the de Morgan formulas:
+$\[fa] x ^ Fx ^ \[<>] ^ \[no] \[te] x ^ \[no] Fx$,
+.i.e.,
+All $x$ are $F$ if and only if there is no $x$ which is not $F$.
+
 .KE
 .[
 $LIST$
