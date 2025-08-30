@@ -1,4 +1,4 @@
-.so 
+.so eqn-definitions.ms
 .so fitch-macros.pic
 .so parameters.ms
 .TL
