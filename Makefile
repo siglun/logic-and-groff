@@ -3,7 +3,7 @@
 .DEFAULT: .ms.pdf .ps.pdf .eps.pdf
 
 default: logic-with-groff.pdf question.pdf
-URI = https://github.com/siglun/mixed-philosophemes/tree/main/logic-stuff
+URI = https://github.com/siglun/logic-and-groff
 
 .ms.pdf:
 	pdfroff -U -R -sGtep   -ms  -M ./tmac -m refer-hooks \

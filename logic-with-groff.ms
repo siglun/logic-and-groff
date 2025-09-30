@@ -51,13 +51,16 @@ It has got its name after its inventor, Fredric Fitch.
 This notation seems to be a de facto standard:
 It is used in all the text books I have been able to find electronically,
 and seems to be taught at logics courses in mathematics as well as philosophy.
-I wrote this note while learning Fitch;
-My intention is to demonstrate how to write predicate and propositional logic,
+I started to wrote this tutorial while learning Fitch while reading philosophy;
+my intention is to demonstrate how to write predicate and propositional logic,
 and deduction on this platform.
-I cannot teach you how to format scientific text in general,
-neither can I give an introduction to logic and natural deduction.
+I cannot teach you how to format scientific text in general (that is large job),
+neither can I give an introduction to logic and natural deduction (I am not qualified for that).
+.PP
+This document lives in an open project at githup.
+Feel free to use the snippets of code and examples.
 .SH
-Writing equations
+Writing text and equations
 .LP
 First, we need to be able to write our texts
 .[\& (there is a good tutorial by  
@@ -157,9 +160,12 @@ U+2286;⊆;\\[ib];subset
 U+2118;℘;\\[wp];powerset           
 .TE
 .KE
+.bp
 .SH
-Using logics in tables
+Using logics in tables and graphs
 .LP
+See Table 2 and Figure 1.
+These things are here just for demonstrating how typographic elements can be combined.
 .KF
 .sp
 .QP
@@ -178,17 +184,15 @@ Using logic in graphs
 .QP
 .vs 12
 .ps 10
-Figure 1. The traditional aristotelian syllogisms.
-
+Figure 1. The traditional aristotelian syllogisms,
+the figure shows how one can embed formulas into a graph.
 .KE
-.SH
-Writing Fitch arguments
 .KF
 .so first-fitch.ms
 .QP
 .vs 12
 .ps 10
-Figure 1. Proof that $A or B, not A therefore B$.
+Figure 2. Proof that $A or B, not A therefore B$.
 The line numbering is in the left-most margin.
 Then there is a vertical line, as long as the proof.
 The step 1-2 in the proof is where the premises lives.
@@ -196,9 +200,14 @@ The horisontal line after step 2 is usually referred to as the \fIfitch line.\fP
 The two groups, 3\(en5 and 3\(en6 are sub-proofs,
 with their own premisses,
 vertical lines and fitch lines
-
+.sp
 .KE
+.SH
+Writing Fitch arguments
 .LP
+Authoring natural deduction is similar to embedding formulas in a graph,
+as demonstrated in Figure 1.
+.PP
 Any proof is initialized by calling this macro,
 which informs all scripts on the number of steps in the proof and its maxiumum depth,
 i.e.,
@@ -270,7 +279,7 @@ Sanity checks and proof reading is your job.
 .QP
 .vs 12
 .ps 10
-Figure 2.
+Figure 3.
 A slightly longer example:
 Prove that $A or B, not B or C therefore A or C$.
 
@@ -282,7 +291,7 @@ Prove that $A or B, not B or C therefore A or C$.
 .QP
 .vs 12
 .ps 10
-Figure 3. A proof using predicate logic.
+Figure 4. A proof using predicate logic.
 It proves without premisses one of the de Morgan formulas:
 $\[fa] x ^ Fx ^ \[<>] ^ \[no] \[te] x ^ \[no] Fx$,
 .i.e.,
