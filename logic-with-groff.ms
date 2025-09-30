@@ -46,10 +46,11 @@ There are alternative implementations of \f[CR]troff\f[P],
 but the GNU one is the one I have used for 35 years.
 .PP
 These systems are old,
-aimed for the  Unix\f[CR]\[tm]\f[P] command line,
-and they were developed by software developers for software developers,
+but they are readily for Linux and Apple iOS computers.
+They are based on Unix\f[CR]\[tm]\f[P] operating system, troff works on they command lines.
+They were developed by software developers for software developers,
 scientists and mathematicians.
-They are not very difficult,
+They are not very difficult to use,
 just very different from what modern users expect.
 And you must write your document in a programmer's editor.
 .PP
