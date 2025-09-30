@@ -68,8 +68,11 @@ my intention is to demonstrate how to write predicate and propositional logic,
 and deduction on this platform.
 I cannot teach you how to format scientific text in general (that is large job),
 neither can I give an introduction to logic and natural deduction (I am not qualified for that).
-.PP
-This document lives in an open project at githup.
+.LP
+This document lives in an open project at github.
+.IP
+\f[CR]https://github.com/siglun/logic-and-groff
+.LP
 Feel free to use the snippets of code and examples.
 .KF
 .sp
