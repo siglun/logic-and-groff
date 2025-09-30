@@ -162,7 +162,6 @@ U+2286;⊆;\\[ib];subset
 U+2118;℘;\\[wp];powerset           
 .TE
 .KE
-.bp
 .SH
 Using logics in tables and graphs
 .LP
