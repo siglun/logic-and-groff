@@ -50,7 +50,7 @@ and they were developed by software developers for software developers,
 scientists and mathematicians.
 They are not very difficult,
 just very different from what modern users expect.
-And you must write your code in a programmers editor.
+And you must write your document in a programmer's editor.
 .PP
 Fitch is a notation for natural deduction.
 .[
@@ -68,56 +68,6 @@ neither can I give an introduction to logic and natural deduction (I am not qual
 .PP
 This document lives in an open project at githup.
 Feel free to use the snippets of code and examples.
-.SH
-Writing text and equations
-.LP
-First, we need to be able to write our texts
-.[\& (there is a good tutorial by  
-#
-branden kollar
-.]\&) 
-and then we can continue with formulas and sentences using \f[CR]eqn\f[P].
-.[
-harding eqn
-.]
-At a first glance, all of them are are \[lq]equations\[rq],
-or anyone who are not familiar with mathematics and logic and the differences between the two will regard them as such.
-Logic is actually a special genre of its own when it comes to formulas or equations.
-.bp
-Here is a set of predicate logic sentences, first in \f[CR]eqn\f[P] source,
-.ID
-.ps 10
-.vs 12
-\&\f[CR].EQ (1)
-    pile {
-	forall(x) SameSize(x)
-	above
-	forall(x) Cube(x) implies Cube(b)
-	above	
-	(Cube(b) and b=c) implies Small(c)
-	above
-	(Small(b) and SameSize(b,c) implies Small(c)
-   }
-\&.EN\f[P]
-.DE
-and then formatted, in Equation (1).
-.EQ (1)
-pile {
-forall(x) SameSize(x)
-above
-forall(x) Cube(x) implies Cube(b)
-above
-(Cube(b) and b=c) implies Small(c)
-above
-(Small(b) and SameSize(b,c)) implies Small(c)
-}
-.EN
-.LP
-To write these formulas,
-you need to use either the unicode characters,
-their Groff names
-or macros I have defined in order to simplify typing.
-See Table 1.
 .KF
 .sp
 .QP
@@ -171,6 +121,56 @@ U+2118;℘;\\[wp];powerset
 .TE
 .KE
 .SH
+Writing text and equations
+.LP
+First, we need to be able to write our texts
+.[\& (there is a good tutorial by  
+#
+branden kollar
+.]\&) 
+and then we can continue with formulas and sentences using \f[CR]eqn\f[P].
+.[
+harding eqn
+.]
+At a first glance, all of them are are \[lq]equations\[rq],
+or anyone who are not familiar with mathematics and logic and the differences between the two will regard them as such.
+Logic is actually a special genre of its own when it comes to formulas or equations.
+.LP
+To write these formulas,
+you need to use either the unicode characters,
+their Groff names
+or macros I have defined in order to simplify typing.
+See Table 1.
+.LP
+Here is a set of predicate logic sentences, first in \f[CR]eqn\f[P] source,
+.ID
+.ps 10
+.vs 12
+\&\f[CR].EQ (1)
+    pile {
+	forall(x) SameSize(x)
+	above
+	forall(x) Cube(x) implies Cube(b)
+	above	
+	(Cube(b) and b=c) implies Small(c)
+	above
+	(Small(b) and SameSize(b,c) implies Small(c)
+   }
+\&.EN\f[P]
+.DE
+and then formatted, in Equation (1).
+.EQ (1)
+pile {
+forall(x) SameSize(x)
+above
+forall(x) Cube(x) implies Cube(b)
+above
+(Cube(b) and b=c) implies Small(c)
+above
+(Small(b) and SameSize(b,c)) implies Small(c)
+}
+.EN
+.SH
 Using logics in tables and graphs
 .LP
 See Table 2 and Figure 1.
@@ -185,8 +185,6 @@ Some useful equivalents if you are doing logic.
 They are presented here as an example how you can embed formulas in a table.
 .so useful-equivalents.ms
 .KE
-.SH
-Using logic in graphs
 .KF
 .sp
 .so aristotelian-syllogism.ms
