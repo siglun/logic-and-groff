@@ -11,8 +11,9 @@ gnu
 .AU
 Sigrid Lundberg
 sigfrid (at) sigfrid-lundberg.se
+.SH
+Introduction
 .LP
-.\" dropcap F 3
 \f[CR]troff\f[P] is a software system for type-setting using Unix\f[CR]\[tm]\f[P] and related operating systems.
 .[
 ossanna kernighan
