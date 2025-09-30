@@ -284,6 +284,7 @@ end_proof(START)
 .PP
 Note that the macros do not check your references.
 Sanity checks and proof reading is your job.
+There are two more examples below, in Figure 3\[en]4.
 .KF
 .sp
 .ID
