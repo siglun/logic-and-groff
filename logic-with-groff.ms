@@ -46,14 +46,14 @@ There are alternative implementations of \f[CR]troff\f[P],
 but the GNU one is the one I have used for 35 years.
 .PP
 These systems are old,
-but they are readily for Linux and Apple iOS computers,
-because they are based on the Unix\f[CR]\[tm]\f[P] operating system.
-\f[CR]troff\f[P] works on their command lines.
+but they are readily available for Linux and Apple iOS computers,
+because they are based on the Unix\f[CR]\[tm]\f[P] operating system  (guess that you can get them for Windows as well).
 \f[CR]troff\f[P] were developed by software developers for software developers,
 scientists and mathematicians.
 It is not very difficult to use,
 just very different from what modern users expect.
 And you must write your document in a programmer's editor.
+\f[CR]troff\f[P] works on the shell command lines.
 .PP
 Fitch is a notation for natural deduction.
 .[
