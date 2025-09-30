@@ -53,7 +53,7 @@ scientists and mathematicians.
 It is not very difficult to use,
 just very different from what modern users expect.
 And you must write your document in a programmer's editor.
-\f[CR]troff\f[P] works on the shell command lines.
+\f[CR]troff\f[P] works on shell command lines.
 .PP
 Fitch is a notation for natural deduction.
 .[
