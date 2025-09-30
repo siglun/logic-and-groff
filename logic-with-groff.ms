@@ -7,13 +7,13 @@ How to type-set logic and natural deductions using
 .smallcaps
 gnu
 ./smallcaps
-\f(CBtroff\fP, \f(CBpic\fP and \f(CBeqn\fP
+\f[CB]troff\f[P], \f[CB]pic\f[P] and \f[CB]eqn\f[P]
 .AU
 Sigrid Lundberg
 sigfrid (at) sigfrid-lundberg.se
 .LP
 .\" dropcap F 3
-\f(CRtroff\fP is a software system for type-setting using Unix\f(CR\(tm\fP and related operating systems.
+\f[CR]troff\f[P] is a software system for type-setting using Unix\f[CR]\[tm]\f[P] and related operating systems.
 .[
 ossanna kernighan
 .]
@@ -22,7 +22,7 @@ pic
 .[
 kernighan pic
 .]
-and \f(CReqn\fP
+and \f[CR]eqn\f[P]
 .[
 kernighan mathematics
 .]
@@ -35,13 +35,14 @@ aka
 .smallcaps
 gnu
 ./smallcaps
-\f(CRtroff\fP is the implementation I am using.
+\f[CR]troff\f[P] is the implementation I am using.
 .[
 Foundation groff
 .]
-There are other competitors, in particular the slightly younger TeX and LaTeX.
-There are also alternative implementations of troff,
-but this is the version I use.
+There are other competitors, in particular the slightly younger TeX and LaTeX,
+I am not able to give you advice on how to use those for logic or science.
+There are alternative implementations of \f[CR]troff\f[P],
+but the GNU one is the one I have used for 35 years.
 .PP
 Fitch is a notation for natural deduction.
 .[
@@ -67,18 +68,19 @@ First, we need to be able to write our texts
 #
 branden kollar
 .]\&) 
-and then we can continue with formulas and sentences using \f(CReqn\fP.
+and then we can continue with formulas and sentences using \f[CR]eqn\f[P].
 .[
 harding eqn
 .]
-At a first glance, all of them are are \(lqequations\(rq,
+At a first glance, all of them are are \[lq]equations\[rq],
 or anyone who are not familiar with mathematics and logic and the differences between the two will regard them as such.
 Logic is actually a special genre of its own when it comes to formulas or equations.
-Here is a set of predicate logic sentences, first in \f(CReqn\fP source,
+.bp
+Here is a set of predicate logic sentences, first in \f[CR]eqn\f[P] source,
 .ID
 .ps 10
 .vs 12
-\&\f(CR.EQ (1)
+\&\f[CR].EQ (1)
     pile {
 	forall(x) SameSize(x)
 	above
@@ -88,7 +90,7 @@ Here is a set of predicate logic sentences, first in \f(CReqn\fP source,
 	above
 	(Small(b) and SameSize(b,c) implies Small(c)
    }
-\&.EN\fP
+\&.EN\f[P]
 .DE
 and then formatted, in Equation (1).
 .EQ (1)
@@ -99,7 +101,7 @@ forall(x) Cube(x) implies Cube(b)
 above
 (Cube(b) and b=c) implies Small(c)
 above
-(Small(b) and SameSize(b,c) implies Small(c)
+(Small(b) and SameSize(b,c)) implies Small(c)
 }
 .EN
 .LP
@@ -114,14 +116,14 @@ See Table 1.
 .vs 12
 .ps 10
 Table 1. Unicode characters for logical signs and operators.
-On some operating systems you can type them by pressing \f[CR]ctrl-shift-u\fP and then the four character code (following \f(CRu+\fP). The Groff name is usually better to use than the Unicode character,
+On some operating systems you can type them by pressing \f[CR]ctrl-shift-u\f[P] and then the four character code (following \f[CR]u+\f[P] in the table). The Groff name is usually better to use than the Unicode character,
 but takes a long time to type.
-The \f(CReqn\fP macros are for easier typing and I have tried to adjust spacings for a nicer look.
+The \f[CR]eqn\f[P] macros are for easier typing and I have tried to adjust spacings for a nicer look.
 .TS
 allbox center tab(;);
 lb lb lb lb lb;
 l l l l l.
-Unicode;Character;Groff name;\f(CBeqn\fP macro;Comment
+Unicode;Character;Groff name;\f[CB]eqn\f[P] macro;Comment
 U+00AC;¬;\\[no];not	
 U+2227;∧;\\[AN];and
 U+2228;∨;\\[OR];or
@@ -215,7 +217,7 @@ how deep the hierarchy of proofs is.
 That is, how many inside proofs, whitin proofs ... do we have.
 You better add one or the references at the right will come to close to the logical statements.
 .ID
-\f(CRset_steps_and_depths(8,3)
+\f[CR]set_steps_and_depths(8,3)
 .DE
 .PP
 Any proof (the root proof or any sub-proof) starts
@@ -223,12 +225,12 @@ with the start_proof() macro,
 which also names that proof.
 After we have started the proof,
 we add its premises,
-and end it with \f(CRpremis_end()\fP.
+and end it with \f[CR]premis_end()\f[P].
 .ID
-\f(CRstart_proof(START);
+\f[CR]start_proof(START);
 add_premis(START,"\[Do]A or B\[Do]");
 add_premis(START,"\[Do]not A\[Do]");
-premis_end(START);\fP
+premis_end(START);\f[P]
 .DE
 .PP
 After ending the premiws section,
@@ -236,26 +238,26 @@ we enter the body of our proofs.
 In this case we start the sub-proofs
 .PP
 .ID
-\f(CRstart_proof(SUB1);
+\f[CR]start_proof(SUB1);
 add_premis(SUB1,"\[Do]A\[Do]");
-premis_end(SUB1);\fP
+premis_end(SUB1);\f[P]
 .DE
 .PP
-In the body of a proof, we use the \f(CRadd_step()\fP macro,
+In the body of a proof, we use the \f[CR]add_step()\f[P] macro,
 which has three argument: (i) the name of the current proof,
 (ii) the result of the step, and finally (iii)
 the references to earlier steps needed for the step.
 .ID
-\f(CRadd_step(SUB1,"\[Do]falsum\[Do]","\[pp] Intro: 3,2");
+\f[CR]add_step(SUB1,"\[Do]falsum\[Do]","\[pp] Intro: 3,2");
 add_step(SUB1,"\[Do]B\[Do]","\[pp] Elim: 4");
 end_proof(SUB1);
 .DE
 .PP
-We end a proof (be it a sub_proof or a proof) with the \f(CRend_proof()\fP macro,
+We end a proof (be it a sub_proof or a proof) with the \f[CR]end_proof()\f[P] macro,
 which needs the name of the current proof as an argument.
 Now we start another subproof.
 .ID
-\f(CRstart_proof(SUB2);
+\f[CR]start_proof(SUB2);
 add_premis(SUB2,"\[Do]B\[Do]");
 premis_end(SUB2);
 add_step(SUB2,"\[Do]B\[Do]","Reit: 6");
@@ -265,7 +267,7 @@ end_proof(SUB2);
 After we have completed the two sub-proofs,
 return to the main proof and completes it with a nice $\(OR$ elimination.
 .ID
-\f(CRadd_step(START,"\[Do]B\[Do]","∨ Elim: 6-7,3-5,1");
+\f[CR]add_step(START,"\[Do]B\[Do]","∨ Elim: 6-7,3-5,1");
 end_proof(START)
 .DE
 .PP
