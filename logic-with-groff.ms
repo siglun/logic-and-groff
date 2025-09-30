@@ -44,6 +44,14 @@ I am not able to give you advice on how to use those for logic or science.
 There are alternative implementations of \f[CR]troff\f[P],
 but the GNU one is the one I have used for 35 years.
 .PP
+These systems are old,
+aimed for the  Unix\f[CR]\[tm]\f[P] command line,
+and they were developed by software developers for software developers,
+scientists and mathematicians.
+They are not very difficult,
+just very different from what modern users expect.
+And you must write your code in a programmers editor.
+.PP
 Fitch is a notation for natural deduction.
 .[
 natural deduction stanford
