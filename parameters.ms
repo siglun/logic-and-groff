@@ -36,4 +36,4 @@ short-label "(@|Q) ' ('(D.y%a*|D%a*)')'"
 label "(@|Q) ', ' (D.y%a*|D%a*)"
 bracket-label " (" ")" "; "
 .R2
-.fam BA
+.\"fam BA
