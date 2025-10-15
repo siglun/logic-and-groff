@@ -100,14 +100,14 @@ U+2194;↔;\\[<>];iff
 U+2194;↔;\\[<>];equiv
 U+21D4;⇔;\\[hA]   
 U+22A5;⊥;\\[pp];falsum
-U+22A2;⊢;not available;;T{
+U+22A2;\f[STIXMath]⊢\f[P];not available;;T{
 .na
 syntactic consequence
 .br
 turnstile
 .\" tee,yields, proves, satisfies or entails
 T}
-U+22A8;⊨;not available;;T{
+U+22A8;\f[STIXMath]⊨\f[P];not available;;T{
 .na
 semantic consequence
 .br
