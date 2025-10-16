@@ -1,3 +1,7 @@
+.special STIXMath
+.char \[/-] \[u22A2]
+.char \[/--] \[u22A8]
+\" \[turn] \[dturn]
 .EQ
 sdefine falsum  %{type "operator" \[pp]}%
 sdefine not     %{type "operator" \[no]}%
@@ -18,6 +22,12 @@ define exists X { some $1 ^ } X
 sdefine implies %{type "operator" vcenter \[->]}%
 sdefine iff     %{type "operator" vcenter \[<>]}%
 sdefine equiv   %{type "operator" vcenter \[<>]}%
+
+sdefine vdash	%{type "operator" vcenter \[/-]}%
+sdefine entails	%{type "operator" vcenter \[/-]}%
+
+sdefine vDash	%{type "operator" vcenter \[/--]}%
+sdefine satisfies	%{type "operator" vcenter \[/--]}%
 
 sdefine therefore   %{type "operator" vcenter \[tf]}%
 sdefine empty       %{type "operator" vcenter \[es]}%
