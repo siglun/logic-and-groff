@@ -63,7 +63,7 @@ It has got its name after its inventor, Fredric Fitch.
 This notation seems to be a de facto standard:
 It is used in all the text books I have been able to find electronically,
 and seems to be taught at logics courses in mathematics as well as philosophy.
-I started to wrote this tutorial while learning Fitch while reading philosophy;
+I started to write this tutorial while learning Fitch while reading philosophy;
 my intention is to demonstrate how to write predicate and propositional logic,
 and deduction on this platform.
 I cannot teach you how to format scientific text in general (that is large job),
@@ -100,19 +100,20 @@ U+2194;↔;\\[<>];iff
 U+2194;↔;\\[<>];equiv
 U+21D4;⇔;\\[hA]   
 U+22A5;⊥;\\[pp];falsum
-U+22A2;\f[STIXMath]⊢\f[P];not available;;T{
+U+22A2;⊢;\\[/-];vdash\[dg];T{
 .na
-syntactic consequence
+syntactic consequence, turnstile
 .br
-turnstile
-.\" tee,yields, proves, satisfies or entails
+requires font support*
 T}
-U+22A8;\f[STIXMath]⊨\f[P];not available;;T{
+U+22A2;⊢;\\[/-];entails\[dg]
+U+22A8;⊨;\\[/--];vDash\[dg];T{
 .na
-semantic consequence
+semantic consequence, double turnstile 
 .br
-double turnstile
+requires font support*
 T}
+U+22A8;⊨;\\[/--];satisfies\[dg]
 U+2261;≡;\\[==];identicalto
 U+25A1;□;\\[sq];nece
 U+25A1;□;\\[sq];necessarily
@@ -125,6 +126,16 @@ U+2209;∉;\\[nm];notmember
 U+2286;⊆;\\[ib];subset
 U+2118;℘;\\[wp];powerset           
 .TE
+.IP
+.vs 12
+.ps 10
+*) I use the math font from Scientific and Technical Information Exchange (STIX) font creation project https://www.stixfonts.org/
+.IP
+.vs 12
+.ps 10
+\[dg]) These operators are names used in eqn only. vdash and vDash are used in TeX/LaTeX for \[/-] and \[/--] respectively.
+I have also added the operators entails and satisfies because I feel that I can remember them and their functions.
+.sp
 .KE
 .SH
 Writing text and equations
