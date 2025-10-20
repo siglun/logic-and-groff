@@ -281,7 +281,7 @@ There are two more examples below, in Figure 3\[en]4.
 Figure 3.
 A slightly longer example:
 Prove that $A or B, not B or C therefore A or C$.
-
+.sp
 .KE
 .LP
 .KF

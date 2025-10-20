@@ -42,5 +42,5 @@ The source code
 forall(x) forall(y) left [ x=y iff forall(F) ( Fx iff Fy) right ]
 \&.EN\f[P]
 .DE
-For each $x$ and $y$ it is true that $x=Y$ if and only all properties of $x$ are also properties of $y$.
+For each $x$ and $y$ it is true that $x=y$ if and only all properties of $x$ are also properties of $y$.
 This is what we refer to as Leibniz' law.

@@ -2,7 +2,7 @@
 .SUFFIXES: .pic .ms .pdf .ps .eps
 .DEFAULT: .ms.pdf .ps.pdf .eps.pdf
 
-default: logic-with-groff.pdf question.pdf
+default: logic-with-groff.pdf
 URI = https://github.com/siglun/logic-and-groff
 
 .ms.pdf:
@@ -28,7 +28,5 @@ excercises.pdf: excercises.ms
 logic-with-groff.pdf: parameters.ms logic-with-groff.ms fitch-macros.pic  \
 	aristotelian-syllogism.ms references.text qr.pdf useful-equivalents.ms \
 	QL-proof-1.ms leibniz.ms Makefile tmac/refer-hooks.tmac
-
-question.pdf:  parameters.ms fitch-macros.pic question.ms  Makefile
 
 time_series.pdf: model-and-plot.r parameters.r
