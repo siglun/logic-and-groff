@@ -27,7 +27,7 @@ excercises.pdf: excercises.ms
 
 logic-with-groff.pdf: parameters.ms logic-with-groff.ms fitch-macros.pic  \
 	aristotelian-syllogism.ms references.text qr.pdf useful-equivalents.ms \
-	QL-proof-1.ms Makefile tmac/refer-hooks.tmac
+	QL-proof-1.ms leibniz.ms Makefile tmac/refer-hooks.tmac
 
 question.pdf:  parameters.ms fitch-macros.pic question.ms  Makefile
 

@@ -1,21 +1,46 @@
-.SH
-Leibniz lagar för identitet
 .LP
-Om allt som är sant om $A$ också är sant om $B$, och visa versa, så är $A=B$.
-Varianter. (i) The indiscernibility of identicals
-.EQ (7)
+\f[B]Leibniz' laws of identity:\f[P]
+If everything which is true about $A$ are true for $B$, and vice versa, then $A=B$.
+Here are some variations upon that theme.
+(i) The indiscernibility of identicals
+.EQ
 forall(x) forall(y) left [ x=y implies forall(F) (Fx implies Fy) right ]
 .EN
-Det vill säga, att om $x$ och $y$ är lika så har $y$ alla de egenskaper som $x$ har.
-.PP
+Here is the source of that equation
+.LD
+.vs 12
+.ps 10
+\f[CR]\&.EQ
+forall(x) forall(y) left [ x=y implies forall(F) (Fx implies Fy) right ]
+\&.EN\f[P]
+.DE
+That is, if $x$ equals $y$ then $y$ has all the properties of $x$.
+.LP
 (ii) The identity of indicernibles:
-.EQ (8)
+.EQ
 forall(x) forall(y) left [ forall(F) (Fx implies Fy) implies x=y right ]
 .EN
-Om för alla $x$ och $y$ gäller att om varje egenskap som $x$ även finns hos $y$ så implicerar det att $x$ och $y$ är identiska.
-.PP
+The source code
+.LD
+.vs 12
+.ps 10
+\&\f[CR].EQ
+forall(x) forall(y) left [ forall(F) (Fx implies Fy) implies x=y right ]
+\&.EN\f[P]
+.DE
+If for all $x$ and $y$ each property of $x$ also is also a property of $y$, then this implicates that $x$ and  $y$ are identical.
+.LP
 (iii) Biconditional version of \(rqLeibniz's Law\(rq:
-.EQ (9)
+.EQ
 forall(x) forall(y) left [ x=y iff forall(F) ( Fx iff Fy) right ]
 .EN
-För varje $x$ och $y$ gäller att $x=Y$ om och endast om alla egenskaper hos $x$ även finns hos $y$. Denna liknar mest det som brukar kallas Leibniz lag.
+The source code
+.LD
+.vs 12
+.ps 10
+\&\f[CR].EQ
+forall(x) forall(y) left [ x=y iff forall(F) ( Fx iff Fy) right ]
+\&.EN\f[P]
+.DE
+For each $x$ and $y$ it is true that $x=Y$ if and only all properties of $x$ are also properties of $y$.
+This is what we refer to as Leibniz' law.

@@ -159,34 +159,8 @@ their Groff names
 or macros I have defined in order to simplify typing.
 See Table 1.
 .LP
-Here is a set of predicate logic sentences, first in \f[CR]eqn\f[P] source,
-.ID
-.ps 10
-.vs 12
-\&\f[CR].EQ (1)
-    pile {
-	forall(x) SameSize(x)
-	above
-	forall(x) Cube(x) implies Cube(b)
-	above	
-	(Cube(b) and b=c) implies Small(c)
-	above
-	(Small(b) and SameSize(b,c) implies Small(c)
-   }
-\&.EN\f[P]
-.DE
-and then formatted, in Equation (1).
-.EQ (1)
-pile {
-forall(x) SameSize(x)
-above
-forall(x) Cube(x) implies Cube(b)
-above
-(Cube(b) and b=c) implies Small(c)
-above
-(Small(b) and SameSize(b,c)) implies Small(c)
-}
-.EN
+Here is a set of predicate logic sentences, first formatted and then \f[CR]eqn\f[P] source,
+.so leibniz.ms
 .SH
 Using logics in tables and graphs
 .LP
