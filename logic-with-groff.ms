@@ -106,8 +106,8 @@ syntactic consequence, turnstile
 .br
 requires font support*
 T}
-U+22A2;⊢;\\[/-];entails\[dg]
-U+22A8;⊨;\\[/--];vDash\[dg];T{
+U+22A2;⊢;\\[/-]\[dd];entails\[dg]
+U+22A8;⊨;\\[/--]\[dd];vDash\[dg];T{
 .na
 semantic consequence, double turnstile 
 .br
@@ -135,6 +135,10 @@ U+2118;℘;\\[wp];powerset
 .ps 10
 \[dg]) These operators are names used in eqn only. vdash and vDash are used in TeX/LaTeX for \[/-] and \[/--] respectively.
 I have also added the operators entails and satisfies because I feel that I can remember them and their functions.
+.IP
+.vs 12
+.ps 10
+\[dd]) The groff names \\[/-] for \[/-] and \\[/--] for \[/--] are my additions.They are brief names with traditional troff look and feel.
 .sp
 .KE
 .SH
