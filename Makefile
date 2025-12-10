@@ -25,6 +25,8 @@ qr.pdf: qr.eps
 
 excercises.pdf: excercises.ms
 
+eqn-cosmetics.pdf:  parameters.ms eqn-cosmetics.ms
+
 logic-with-groff.pdf: parameters.ms logic-with-groff.ms fitch-macros.pic  \
 	aristotelian-syllogism.ms references.text qr.pdf useful-equivalents.ms \
 	QL-proof-1.ms leibniz.ms Makefile tmac/refer-hooks.tmac
