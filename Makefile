@@ -29,6 +29,7 @@ eqn-cosmetics.pdf:  parameters.ms eqn-cosmetics.ms
 
 logic-with-groff.pdf: parameters.ms logic-with-groff.ms fitch-macros.pic  \
 	aristotelian-syllogism.ms references.text qr.pdf useful-equivalents.ms \
-	QL-proof-1.ms leibniz.ms Makefile tmac/refer-hooks.tmac
+	QL-proof-1.ms leibniz.ms  eqn-definitions.ms \
+	Makefile tmac/refer-hooks.tmac
 
 time_series.pdf: model-and-plot.r parameters.r

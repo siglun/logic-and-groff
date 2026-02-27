@@ -1,6 +1,8 @@
 .special STIXMath
 .char \[/-] \[u22A2]
 .char \[/--] \[u22A8]
+.char \[ulcorner] \[u231C]
+.char \[urcorner] \[u231D]
 \" \[turn] \[dturn]
 .EQ
 sdefine falsum  %{type "operator" \[pp]}%
@@ -9,6 +11,9 @@ sdefine and     %{type "operator" \[AN]}%
 sdefine or      %{type "operator" \[OR]}%
 sdefine any     %{type "operator" \[fa]}%
 sdefine some    %{type "operator" \[te]}%
+
+sdefine ulcorner %{\[ulcorner]}%
+sdefine urcorner %{\[urcorner]}%
 
 sdefine nece  %{type "operator"  vcenter \[sq]}%
 sdefine possi %{type "operator"  vcenter \[lz]}%

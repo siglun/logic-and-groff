@@ -100,18 +100,22 @@ U+2194;↔;\\[<>];iff
 U+2194;↔;\\[<>];equiv
 U+21D4;⇔;\\[hA]   
 U+22A5;⊥;\\[pp];falsum
+U+231C;⌜;\\[ulcorner];ulcorner;T{
+.na
+upper left corner quote*
+T}
+U+231D;⌝;\\[urcorner];urcorner;T{
+.na
+upper right corner quote*
+T}
 U+22A2;⊢;\\[/-];vdash\[dg];T{
 .na
-syntactic consequence, turnstile
-.br
-requires font support*
+syntactic consequence, turnstile*
 T}
 U+22A2;⊢;\\[/-]\[dd];entails\[dg]
 U+22A8;⊨;\\[/--]\[dd];vDash\[dg];T{
 .na
-semantic consequence, double turnstile 
-.br
-requires font support*
+semantic consequence, double turnstile*
 T}
 U+22A8;⊨;\\[/--];satisfies\[dg]
 U+2261;≡;\\[==];identicalto
@@ -129,7 +133,7 @@ U+2118;℘;\\[wp];powerset
 .IP
 .vs 12
 .ps 10
-*) I use the math font from Scientific and Technical Information Exchange (STIX) font creation project https://www.stixfonts.org/
+*) Requires font support. I use the math font from Scientific and Technical Information Exchange (STIX) font creation project https://www.stixfonts.org/
 .IP
 .vs 12
 .ps 10
@@ -139,6 +143,8 @@ I have also added the operators entails and satisfies because I feel that I can 
 .vs 12
 .ps 10
 \[dd]) The groff names \\[/-] for \[/-] and \\[/--] for \[/--] are my additions.They are brief names with traditional troff look and feel.
+.sp
+.sp
 .sp
 .KE
 .SH
@@ -155,14 +161,13 @@ harding eqn
 .]
 At a first glance, all of them are are \[lq]equations\[rq],
 or anyone who are not familiar with mathematics and logic and the differences between the two will regard them as such.
+.PP
 Logic is actually a special genre of its own when it comes to formulas or equations.
-.LP
 To write these formulas,
 you need to use either the unicode characters,
 their Groff names
 or macros I have defined in order to simplify typing.
 See Table 1.
-.LP
 Here is a set of predicate logic sentences, first formatted and then \f[CR]eqn\f[P] source,
 .so leibniz.ms
 .SH
@@ -188,6 +193,7 @@ They are presented here as an example how you can embed formulas in a table.
 .ps 10
 Figure 1. The traditional aristotelian syllogisms,
 the figure shows how one can embed formulas into a graph.
+.sp
 .KE
 .KF
 .so first-fitch.ms
