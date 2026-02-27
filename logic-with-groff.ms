@@ -10,7 +10,6 @@ gnu
 \f[CB]troff\f[P], \f[CB]pic\f[P] and \f[CB]eqn\f[P]
 .AU
 Sigrid Lundberg
-sigfrid (at) sigfrid-lundberg.se
 .SH
 Introduction
 .LP
