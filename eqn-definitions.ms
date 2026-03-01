@@ -3,14 +3,16 @@
 .char \[/--] \[u22A8]
 .char \[ulcorner] \[u231C]
 .char \[urcorner] \[u231D]
+.char \[strictif] \[u297D]
 \" \[turn] \[dturn]
 .EQ
-sdefine falsum  %{type "operator" \[pp]}%
-sdefine not     %{type "operator" \[no]}%
-sdefine and     %{type "operator" \[AN]}%
-sdefine or      %{type "operator" \[OR]}%
-sdefine any     %{type "operator" \[fa]}%
-sdefine some    %{type "operator" \[te]}%
+sdefine falsum   %{type "operator" \[pp]}%
+sdefine not      %{type "operator" \[no]}%
+sdefine and      %{type "operator" \[AN]}%
+sdefine or       %{type "operator" \[OR]}%
+sdefine any      %{type "operator" \[fa]}%
+sdefine some     %{type "operator" \[te]}%
+sdefine strictif %{type "operator" \[strictif]}%
 
 sdefine ulcorner %{\[ulcorner]}%
 sdefine urcorner %{\[urcorner]}%

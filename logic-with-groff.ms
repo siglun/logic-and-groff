@@ -99,11 +99,11 @@ U+2194;↔;\\[<>];iff
 U+2194;↔;\\[<>];equiv
 U+21D4;⇔;\\[hA]   
 U+22A5;⊥;\\[pp];falsum
-U+231C;⌜;\\[ulcorner];ulcorner;T{
+U+231C;⌜;\\[ulcorner];ulcorners\[dg];T{
 .na
 upper left corner quote*
 T}
-U+231D;⌝;\\[urcorner];urcorner;T{
+U+231D;⌝;\\[urcorner];urcorners\[dg];T{
 .na
 upper right corner quote*
 T}
@@ -118,6 +118,7 @@ semantic consequence, double turnstile*
 T}
 U+22A8;⊨;\\[/--];satisfies\[dg]
 U+2261;≡;\\[==];identicalto
+U+297D;⥽;\\[strictif];strictifs\[dg];$p strictif q identicalto necessarily ( p implies q )$*
 U+25A1;□;\\[sq];nece
 U+25A1;□;\\[sq];necessarily
 U+25C7;◊;\\[lz];possi
