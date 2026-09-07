@@ -134,6 +134,7 @@ U+2118;℘;\\[wp];powerset
 .vs 12
 .ps 10
 *) Requires font support. I use the math font from Scientific and Technical Information Exchange (STIX) font creation project https://www.stixfonts.org/
+In addition I use the Brill Typeface as the my font family https://brill.com/page/510269 
 .IP
 .vs 12
 .ps 10
