@@ -1,0 +1,4 @@
+[submodule "bib"]
+	path = bib
+	url = https://github.com/siglun/bibliographies.git
+	branch = main
