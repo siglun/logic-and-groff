@@ -116,6 +116,7 @@ U+22A8;⊨;\\[/--]\[dd];vDash\[dg];T{
 .na
 semantic consequence, double turnstile*
 T}
+U+21A6;↦;\\[|->];mapsto
 U+22A8;⊨;\\[/--];satisfies\[dg]
 U+2261;≡;\\[==];identicalto
 U+297D;⥽;\\[strictif];strictifs\[dg];$p strictif q identicalto necessarily ( p implies q )$*

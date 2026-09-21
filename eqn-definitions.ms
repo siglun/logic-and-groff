@@ -1,6 +1,7 @@
 .special STIXMath
 .char \[/-] \[u22A2]
 .char \[/--] \[u22A8]
+.char \[|->] \[u21A6] 
 .char \[ulcorner] \[u231C]
 .char \[urcorner] \[u231D]
 .char \[strictif] \[u297D]
@@ -13,6 +14,8 @@ sdefine or       %{type "operator" \[OR]}%
 sdefine any      %{type "operator" \[fa]}%
 sdefine some     %{type "operator" \[te]}%
 sdefine strictif %{type "operator" \[strictif]}%
+
+sdefine mapsto   %{type "operator" \[|->]}% 
 
 sdefine ulcorner %{\[ulcorner]}%
 sdefine urcorner %{\[urcorner]}%
