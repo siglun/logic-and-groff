@@ -30,7 +30,7 @@ no-label-in-reference
 no-default-database
 move-punctuation
 date-as-label D.+yD.y%a*D.-y
-database ./bib/references.text
+database ./bib/bibliography
 join-authors " and " ", " " and "
 short-label "(@|Q) ' ('(D.y%a*|D%a*)')'"
 label "(@|Q) ', ' (D.y%a*|D%a*)"

@@ -5,6 +5,14 @@
 default: logic-with-groff.pdf
 URI = https://github.com/siglun/logic-and-groff
 
+BIB := bib
+
+$(BIB)/bibliography.i: FORCE
+	$(MAKE) -C $(BIB)
+
+FORCE:
+
+
 .ms.pdf:
 	pdfroff -U -R -sGtep   -ms  -M ./tmac -m refer-hooks \
 	-m decorations  -m pdfpic -k -Kutf-8  -P-pa4 -Tps $<  > $*.pdf
@@ -28,7 +36,8 @@ excercises.pdf: excercises.ms
 eqn-cosmetics.pdf:  parameters.ms eqn-cosmetics.ms
 
 logic-with-groff.pdf: parameters.ms logic-with-groff.ms fitch-macros.pic  \
-	aristotelian-syllogism.ms bib/references.text qr.pdf useful-equivalents.ms \
+	aristotelian-syllogism.ms bib/bibliography.i \
+	qr.pdf useful-equivalents.ms \
 	QL-proof-1.ms leibniz.ms  eqn-definitions.ms \
 	Makefile tmac/refer-hooks.tmac
 
