@@ -33,3 +33,14 @@ turnstile ⊢ and /-- for double turnstile ⊨. I added this to the file
 .char \[/-] \[u22A2]
 .char \[/--] \[u22A8]
 ```
+
+# Building
+
+I use GNU Make for building my documents. I store them on github.com. There are two submodules in use in this repo, ```tmac''' and ```bib'''. To clone them use
+
+    git clone --recurse-submodules
+	
+The can be pulled into this repo by
+
+    git submodule update --remote bib
+    git submodule update --remote tmac
