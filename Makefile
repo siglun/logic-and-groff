@@ -1,8 +1,10 @@
 
 .SUFFIXES: .pic .ms .pdf .ps .eps
-.DEFAULT: .ms.pdf .ps.pdf .eps.pdf
 
 default: logic-with-groff.pdf
+PHONY: default clean FORCE
+
+
 URI = https://github.com/siglun/logic-and-groff
 
 BIB := bib
@@ -23,9 +25,6 @@ FORCE:
 clean:
 	rm -f *~ excercises.p* qr.* logic-with-groff.ps
 
-time_series.pdf:
-	./model-and-plot.r; grep -vi time shit.text > model_data.text
-
 qr.eps:
 	qrencode -l H -v 1 -s 3 -d300 -t EPS -o qr.eps $(URI)
 
@@ -37,8 +36,8 @@ eqn-cosmetics.pdf:  parameters.ms eqn-cosmetics.ms
 
 logic-with-groff.pdf: parameters.ms logic-with-groff.ms fitch-macros.pic  \
 	aristotelian-syllogism.ms bib/bibliography.i \
+	first-fitch.ms PL-proof.ms back-matter.ms \
 	qr.pdf useful-equivalents.ms \
 	QL-proof-1.ms leibniz.ms  eqn-definitions.ms \
 	Makefile tmac/refer-hooks.tmac
 
-time_series.pdf: model-and-plot.r parameters.r
